@@ -79,3 +79,15 @@ body {
     opacity: 1;
     width: 100%;
 }
+
+@media screen and (max-width: 576px) { 
+    html {
+        font-size: 8px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    html {
+        font-size: 10px;
+    }
+}
