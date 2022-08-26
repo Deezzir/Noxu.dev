@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&family=Silkscreen&family=Ubuntu&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -11,38 +13,69 @@ html {
 body {
     width: 100%;
     position: relative;
-    color: #fff;
+    color: white;
     background: #3e4a61;
     font-family: 'roboto', sans-serif;
 }
 
 .title {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     min-height: 100vh;
 }
 
-.heading {
-    display: block;
-    font-size: 5rem;
-    font-weight: 500;
+.title .heading {
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 3px 0 wheat, -2px 0 yellow, -4px 0 green;
+    font-family: 'Silkscreen', cursive;
 }
 
 .nav {
-}
-
-.links-container {
-    list-style: none;
+    padding: 3em 2em;
+    text-align: center;
 }
 
 .link {
     font-size: 1.5rem;
-    text-transform: capitalize;
-    color: #fff;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
     text-decoration: none;
     margin: 0 10px;
-    padding: 20px 20px 15px 20px;
+    padding: 10px 10px;
     position: relative;
+}
+
+.link:before,
+.link:after {
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 2px;
+    content: '';
+    background: #FFF;
+    transition: all 0.3s;
+}
+
+.link:before {
+    left: 0px;
+    top: 0px;
+}
+
+.link:after {
+    right: 0px;
+    bottom: 0px;
+}
+
+.link:hover:before,
+.link:hover:after {
+    opacity: 1;
+    width: 100%;
 }
